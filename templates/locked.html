@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+    <head>
+
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        
+        <link rel="icon" type="image/x-icon" href="/static/wrong.jpg"> <!--This is used to show a small image icon in the tab, next to its title-->
+
+        <title>Locked</title>
+
+        <link rel="stylesheet" href="/static/styles.css">
+
+    </head>
+
+    <body class="screen-center">
+
+        <h2 style="text-align: center;">This account is locked due to too many failed login attemps.</h2> <!--Used as an error statement-->
+        <h1 style="text-align: center;">Please seek Administrator to remove this lock, and/or to reset your password.</h1>
+
+
+    </body>
+
+    <form
+    action="/logout"
+    name="logout"> <!--This is a form that is used to log out a user, as well as clearing session variables-->
+
+
+    <button style="font-size: 30px;" type="submit">Log Out</button>
+
+    </form>
+
+    </html>

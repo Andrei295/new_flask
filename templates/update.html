@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+    <head>
+
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <title>Update Page</title>
+
+        <link rel="stylesheet" href="/static/styles.css">
+
+    </head>
+
+    <body class="screen-center">
+
+        <h1 style="font-size: 50px;">Update Page</h1>
+        
+
+<form action="/update"
+    method="post"
+    name="update"> <!--This is a form that is used to update a user's account information-->
+
+    <input type="hidden" name="ID" value="{{ ID }}"> <!--This is used to send the user's ID to a route that will be used to update the correct user's account information-->
+
+    <input style="font-size: 35px;" type="text" name="Username" placeholder="New Username" autofocus autocomplete="off"> 
+    <input style="font-size: 35px;" type="password" name="Password" placeholder="New Password" autofocus autocomplete="off"> 
+    <input style="font-size: 35px;" type="email" name="Email" placeholder="New Email" autofocus autocomplete="off"> 
+    <input style="font-size: 35px;" type="text" name="Name" placeholder="New Name" autofocus autocomplete="off">
+
+    <p></p>
+    <p></p>
+
+    <button style="font-size: 30px;" type="submit">Update</button>
+
+
+</form>
+
+</body>
+
+</html>
