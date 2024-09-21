@@ -1,4 +1,4 @@
-###Need to delete Virtual Environment before pushing to git
+###Need to delete Virtual Environment before pushing to git ##
 
 ###Need to install Virtual Environment to use the Web Server
 
