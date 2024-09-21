@@ -32,7 +32,7 @@
     <!--A form that is used to gather a username and password from a user-->
     <div style="display: flex; margin-bottom: 10px; flex-direction: column; align-items: center;">
         <h3>
-            You must be logged in to continue.
+            You must be logged in to continue!
         </h3>
     </div>
 
@@ -40,7 +40,9 @@
 
     <div style="display: flex; justify-content: center; align-items: center; gap: 20px;">
         <form class="card" action="/register" method="post" name="register">
+
             <span>Register</span>
+
             <input type="text" name="Name" placeholder="Name" autofocus autocomplete="off">
             <input type="email" name="Email" placeholder="Email" autofocus autocomplete="off">
 
@@ -58,10 +60,13 @@
 
         <form class="card" action="/home" method="post" name="login">
             <span>Login</span>
+
             <input type="text" name="Username" placeholder="Username" autofocus autocomplete="off">
             <!--Used to collect a username-->
+
             <input type="password" name="Password" placeholder="Password" autofocus autocomplete="off">
             <!--Used to collect a password-->
+
             <button type="submit">Login</button>
         </form>
     </div>
