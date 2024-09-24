@@ -39,8 +39,18 @@ button {
     text-align: center;
     padding: 10px 20px;
     border: 0;
-    background: #354dd4;
+    background: black;
     color: #fff;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+button:hover {
+    text-align: center;
+    padding: 10px 20px;
+    border: 0;
+    background: white;
+    color: black;
     border-radius: 10px;
     cursor: pointer;
 }
