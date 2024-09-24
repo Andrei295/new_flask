@@ -1,7 +1,3 @@
-###Need to delete Virtual Environment before pushing to git
-
-###Need to install Virtual Environment to use the Web Server
-
 from flask import Flask, redirect, render_template, request, session #python -m flask run
 from flask_session import Session
 from cs50 import SQL
