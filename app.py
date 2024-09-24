@@ -3,7 +3,7 @@ from flask_session import Session
 from cs50 import SQL
 import hashlib
 
-data = SQL("sqlite:///D://userdata.db") #Used to gather information from the database #This line will need changing if your database is saved somewhere else
+data = SQL("sqlite:///C://Temp//userdata.db") #Used to gather information from the database #This line will need changing if your database is saved somewhere else
 
 app = Flask(__name__)
 
