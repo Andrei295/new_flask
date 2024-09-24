@@ -31,7 +31,7 @@ input {
     flex-direction: column;
     gap: 15px;
     padding: 20px;
-    border: 1px solid #ccc;
+    border: 3px solid #000000;
     border-radius: 10px;
 }
 
@@ -53,4 +53,13 @@ button:hover {
     color: black;
     border-radius: 10px;
     cursor: pointer;
+}
+
+.quote {
+    text-decoration: solid; 
+    color:green; 
+    font-size: 50px;
+    position: absolute;
+    top:0;
+    right:0;
 }
