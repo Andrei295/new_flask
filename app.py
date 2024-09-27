@@ -276,7 +276,7 @@ def maincontent():
 
 
 
-@app.route("/accessibility", methods=["POST"]) #This is used to chnage the zoom or colour scheme of the web page
+@app.route("/accessibility") #This is used to chnage the zoom or colour scheme of the web page
 def accessibility():
 
     return render_template("accessibility.html")
