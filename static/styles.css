@@ -36,7 +36,7 @@ input {
     border-radius: 10px;
 }
 
-.button {
+.homebutton {
     text-align: center;
     padding: 10px 20px;
     border: 0;
@@ -46,7 +46,7 @@ input {
     cursor: pointer;
 }
 
-.button:hover {
+.homebutton:hover {
     text-align: center;
     padding: 10px 20px;
     border: 0;
