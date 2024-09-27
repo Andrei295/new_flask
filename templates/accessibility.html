@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+    <head>
+
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <title>Failure</title>
+
+        <link rel="stylesheet" href="/static/styles.css">
+
+    </head>
+
+    <body class="screen-center" style="background-color: rgb(187, 187, 187);">
+    
+
+        <h2>Ajust Your Zoom</h2> 
+
+        <p></p>
+        <p></p>
+
+        <!--Need a slider that changes the zoom of the page here-->
+
+        <p></p>
+        <p></p>
+        <p></p>
+        
+
+        <h2>Choose Your Colour Scheme</h2>
+
+        <form
+        action="/scheme"
+        method="post"
+        name="colour"><!--Used to gather an input and change the colour scheme-->
+    
+        <h5>Orginal</h5>
+        <input type="radio" value="Original" name="Original">
+
+
+        <h5>Dark</h5>
+        <input type="radio" value="Dark" name="Dark">
+
+
+
+        <h5>Bright</h5>
+        <input type="radio" value="Bright" name="Bright">
+    
+        
+        <button type="submit">Confirm Choice</button>
+    
+    
+        </form>
+
+
+    </body>
+
+
+    <p></p>
+    <p></p>
+    <p></p>
+
+    <form
+    action="/logout"
+    name="logout"> <!--This is a form that is used to log out a user, as well as clearing session variables-->
+
+
+    <button style="font-size: 30px;" type="submit">Log Out</button>
+
+    </form>
+
+    </html>
