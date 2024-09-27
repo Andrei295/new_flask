@@ -275,6 +275,13 @@ def maincontent():
     return render_template("maincontent.html")
 
 
+
+@app.route("/accessibility")
+def accessibility():
+
+    return render_template("accessibility.html")
+
+
 ###List of names and passwords - so they are not forgotten
 
 ### Username: admin, Password: zxcvb
