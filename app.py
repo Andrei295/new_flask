@@ -276,10 +276,19 @@ def maincontent():
 
 
 
-@app.route("/accessibility")
+@app.route("/accessibility", methods=["POST"]) #This is used to chnage the zoom or colour scheme of the web page
 def accessibility():
 
     return render_template("accessibility.html")
+
+
+
+@app.route("/scheme", methods=["POST"])
+def scheme():
+
+    ###Need to change zoom and/or colour scheme
+
+    return redirect("/")
 
 
 ###List of names and passwords - so they are not forgotten

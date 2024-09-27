@@ -64,3 +64,15 @@ button:hover {
     top:0;
     right:0;
 }
+
+.access button {
+    text-align: center;
+    padding: 10px 20px;
+    border: 0;
+    background: darkgray;
+    color: aqua;
+    border-radius: 10px;
+    cursor: pointer;
+    bottom: 0;
+    right:0
+}
