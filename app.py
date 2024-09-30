@@ -62,6 +62,7 @@ def home(): #This is used to validate the user's entries, and direct them to app
                     return redirect("/reset")
 
                 elif data.execute("SELECT Status FROM users WHERE Username = ? AND Status LIKE 9", name): #This will check if the account is an administrator
+                    data.execute("UPDATE users SET Count = 0 WHERE Username = ?", name) #This is used to prevent the admin from getting locked out
                     return redirect("/admin") #The admin will be sent to the admin page, where they can update the database
                 
                 elif data.execute("SELECT Status FROM users WHERE Username = ? AND Status LIKE 0", name): #This wil check if the account is inactive
