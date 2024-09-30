@@ -76,3 +76,15 @@ input {
     font-size: 45px;
     position: absolute;
 }
+
+
+.classes button {
+    color: red;
+    background: darkgray;
+    border-radius: 10px;
+    cursor: pointer;
+    bottom: 20px;
+    left:20px;
+    font-size: 45px;
+    position: absolute;
+}

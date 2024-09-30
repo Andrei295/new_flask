@@ -151,7 +151,7 @@ def unlock():
     ID = request.form.get("ID")
     if ID:
 
-        data.execute("UPDATE users SET Status = 3 WHERE ID = ?", ID) #This will chnage the user's account to unlocked, but needs a password change
+        data.execute("UPDATE users SET Status = 3 WHERE ID = ?", ID) #This will change the user's account to unlocked, but needs a password change
 
     return redirect("/admin")
 
@@ -277,10 +277,17 @@ def maincontent():
 
 
 
-@app.route("/accessibility") #This is used to chnage the zoom or colour scheme of the web page
+@app.route("/accessibility") #This is used to change the zoom or colour scheme of the web page
 def accessibility():
 
     return render_template("accessibility.html")
+
+
+
+@app.route("/classes") #This is used to allow the user to view the classes schedule and book for a class
+def classes():
+
+    return render_template("classes.html")
 
 
 
