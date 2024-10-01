@@ -291,6 +291,12 @@ def scheme():
     return redirect("/")
 
 
+@app.route("/back") #This is used to return the user back to the home page
+def back():
+
+    return render_template("home.html")
+
+
 ###List of names and passwords - so they are not forgotten
 
 ### Username: admin, Password: zxcvb
