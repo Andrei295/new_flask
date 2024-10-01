@@ -97,3 +97,11 @@ input {
     align-items: center;
     text-align: center;
 }
+
+.main-content h2 {
+    color:magenta
+}
+
+.main-content h3 {
+    color:aqua
+}
