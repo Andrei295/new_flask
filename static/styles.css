@@ -1,3 +1,5 @@
+/* For general use */
+
 body {
     font-family: Arial, sans-serif;
     margin: 0px;
@@ -12,6 +14,8 @@ body {
     align-items: center;
     height: 100vh;
 }
+
+/* For the index page */
 
 input {
     padding: 9px;
@@ -77,18 +81,7 @@ input {
     position: absolute;
 }
 
-
-.classes button {
-    color: red;
-    background: darkgray;
-    border-radius: 10px;
-    cursor: pointer;
-    bottom: 20px;
-    left:20px;
-    font-size: 45px;
-    position: absolute;
-}
-
+/* For main content page */
 
 .main-content {
     display: flex;
