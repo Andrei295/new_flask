@@ -297,12 +297,13 @@ def back():
     return render_template("home.html")
 
 
+@app.route("/store") #This is used to take the user to the Online store
+def store():
+    
+    return render_template("store.html")
+
+
 ###List of names and passwords - so they are not forgotten
 
 ### Username: admin, Password: zxcvb
 ### Username: Andrei567, Password: qwerty
-
-
-
-if __name__ == '__main__':
-    app.run(debug=True) #This will run the app in debug mode
