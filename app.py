@@ -283,14 +283,6 @@ def accessibility():
     return render_template("accessibility.html")
 
 
-
-@app.route("/classes") #This is used to allow the user to view the classes schedule and book for a class
-def classes():
-
-    return render_template("classes.html")
-
-
-
 @app.route("/scheme", methods=["POST"])
 def scheme():
 
