@@ -98,3 +98,10 @@ input {
 .main-content h3 {
     color:aqua
 }
+
+/* For accessibility page */
+
+.accessibility {
+    align-items: center;
+    text-align: center;
+}
