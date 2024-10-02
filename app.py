@@ -3,7 +3,7 @@ from flask_session import Session
 from cs50 import SQL
 import hashlib
 
-data = SQL("sqlite:///C://Temp//userdata.db") #Used to gather information from the database #This line will need changing if your database is saved somewhere else
+data = SQL("sqlite:///D://userdata.db") #Used to gather information from the database #This line will need changing if your database is saved somewhere else
 
 app = Flask(__name__)
 
@@ -283,10 +283,10 @@ def accessibility():
     return render_template("accessibility.html")
 
 
-@app.route("/scheme", methods=["POST"])
+@app.route("/scheme", methods=["POST"]) #This is used to change the colour scheme of the website
 def scheme():
 
-    ###Need to change zoom and/or colour scheme
+    scheme = request.form.get("scheme")
 
     return redirect("/")
 
