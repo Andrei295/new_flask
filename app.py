@@ -6,11 +6,6 @@ import hashlib
 import unittest
 
 
-class Test(unittest.TestCode):
-    def test_code(value):
-        value.tests(value, True)
-
-
 data = SQL("sqlite:///C://Temp//userdata.db") #Used to gather information from the database #This line will need changing if your database is saved somewhere else
 
 app = Flask(__name__)
@@ -321,3 +316,15 @@ def classes():
 
 ### Username: admin, Password: zxcvb
 ### Username: Andrei567, Password: qwerty
+
+
+
+class Test(unittest.TestCase): #python -m unittest
+    def test_bool(self):
+        self.assertEqual(value == 1)
+
+if __name__ == '__main__':
+    unittest.main()
+
+
+value = data.execute("SELECT * FROM users WHERE ClassID = ?", 1)
