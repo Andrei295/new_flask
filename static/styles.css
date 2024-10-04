@@ -111,16 +111,13 @@ input {
     width: 20px;
 }
 
-.scheme button {
-    height: 10px;
-    width: 30px;
+.scheme-button {
     border: 0;
     border-radius: 10px;
     padding: 10px 20px;;
     color: black;
     border-radius: 10px;
     cursor: pointer;
-    bottom: 20px;
-    font-size: 45px;
-    position: absolute;
+    font-size: 35px;
+    position:relative;
 }
