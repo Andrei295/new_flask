@@ -3,7 +3,12 @@ from flask_session import Session
 from cs50 import SQL
 import hashlib
 
+import unittest
 
+
+class Test(unittest.TestCode):
+    def test_code(value):
+        value.tests(value, True)
 
 
 data = SQL("sqlite:///C://Temp//userdata.db") #Used to gather information from the database #This line will need changing if your database is saved somewhere else
@@ -44,8 +49,8 @@ def home(): #This is used to validate the user's entries, and direct them to app
         
         else:            
 
-            value = hashlib.md5(phrase.encode()) #This is the first part of hashing the entered password
-            value = value.hexdigest() #This is the second part of hashing the entered password
+            value = hashlib.md5(phrase.encode()) 
+            value = value.hexdigest() 
 
             if data.execute("SELECT * FROM users WHERE Username = ? AND Password = ?", name, value): #This is used to check if the password matches the password in the database
                 data.execute("UPDATE users SET Count = 0 WHERE Username = ?", name) #This will reset the failed attempt count (this will only happen if the user enters their password correctly)
@@ -304,6 +309,12 @@ def back():
 def store():
     
     return render_template("store.html")
+
+
+@app.route("/classes") #This is used to take the user to the classes/sechedule page
+def classes():
+
+    return render_template("classes.html")
 
 
 ###List of names and passwords - so they are not forgotten
