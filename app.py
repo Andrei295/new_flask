@@ -129,7 +129,7 @@ def register():
 
         phrase = hash(phrase) #This is to convert the password into a hash value
 
-        data.execute("INSERT INTO users (Username, Password, Email, Status, Name, Count) VALUES (?)", (username, phrase, mail, "1", name, "0")) #This will update the database with a new user
+        data.execute("INSERT INTO users (Username, Password, Email, Status, Name, Count, ClassID) VALUES (?)", (username, phrase, mail, "1", name, "0", 0)) #This will update the database with a new user
 
         return redirect("/confirm")
 
