@@ -320,7 +320,7 @@ def classes():
 
 
 class Test(unittest.TestCase): #python -m unittest
-    def test_bool(self):
+    def test_value(self):
         self.assertEqual(value == 1)
 
 if __name__ == '__main__':
