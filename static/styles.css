@@ -15,6 +15,7 @@ body {
     height: 100vh;
 }
 
+
 /* For the index page */
 
 input {
@@ -81,6 +82,7 @@ input {
     position: absolute;
 }
 
+
 /* For main content page */
 
 .main-content {
@@ -98,6 +100,7 @@ input {
 .main-content h3 {
     color:aqua
 }
+
 
 /* For accessibility page */
 
@@ -120,4 +123,18 @@ input {
     cursor: pointer;
     font-size: 35px;
     position:relative;
+}
+
+
+/* For classes/schedule */
+
+.class-button {
+    padding: 10px 20px;
+    color:red;
+    border-radius: 10px;
+    cursor: pointer;
+    bottom: 20px;
+    left: 20px;
+    font-size: 45px;
+    position: absolute;
 }
