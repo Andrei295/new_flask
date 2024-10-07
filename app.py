@@ -319,7 +319,7 @@ def classes():
 
 
 
-class Test(unittest.TestCase): #python -m unittest Test
+class Test(unittest.TestCase): #python -m unittest
     def test_value(self):
         self.assertEqual(value == 1)
 
