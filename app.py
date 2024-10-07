@@ -3,6 +3,9 @@ from flask_session import Session
 from cs50 import SQL
 import hashlib
 
+import unittest
+
+
 data = SQL("sqlite:///C://Temp//userdata.db") #Used to gather information from the database #This line will need changing if your database is saved somewhere else
 
 app = Flask(__name__)
@@ -41,8 +44,8 @@ def home(): #This is used to validate the user's entries, and direct them to app
         
         else:            
 
-            value = hashlib.md5(phrase.encode()) #This is the first part of hashing the entered password
-            value = value.hexdigest() #This is the second part of hashing the entered password
+            value = hashlib.md5(phrase.encode()) 
+            value = value.hexdigest() 
 
             if data.execute("SELECT * FROM users WHERE Username = ? AND Password = ?", name, value): #This is used to check if the password matches the password in the database
                 data.execute("UPDATE users SET Count = 0 WHERE Username = ?", name) #This will reset the failed attempt count (this will only happen if the user enters their password correctly)
@@ -128,7 +131,7 @@ def register():
 
         phrase = hash(phrase) #This is to convert the password into a hash value
 
-        data.execute("INSERT INTO users (Username, Password, Email, Status, Name, Count) VALUES (?)", (username, phrase, mail, "1", name, "0")) #This will update the database with a new user
+        data.execute("INSERT INTO users (Username, Password, Email, Status, Name, Count, ClassID) VALUES (?)", (username, phrase, mail, "1", name, "0", 0)) #This will update the database with a new user
 
         return redirect("/confirm")
 
@@ -283,10 +286,10 @@ def accessibility():
     return render_template("accessibility.html")
 
 
-@app.route("/scheme", methods=["POST"])
+@app.route("/scheme", methods=["POST"]) #This is used to change the colour scheme of the website
 def scheme():
 
-    ###Need to change zoom and/or colour scheme
+    scheme = request.form.get("scheme")
 
     return redirect("/")
 
@@ -303,7 +306,25 @@ def store():
     return render_template("store.html")
 
 
+@app.route("/classes") #This is used to take the user to the classes/sechedule page
+def classes():
+
+    return render_template("classes.html")
+
+
 ###List of names and passwords - so they are not forgotten
 
 ### Username: admin, Password: zxcvb
 ### Username: Andrei567, Password: qwerty
+
+
+
+class Test(unittest.TestCase): #python -m unittest Test
+    def test_value(self):
+        self.assertEqual(value == 1)
+
+if __name__ == '__main__':
+    unittest.main()
+
+
+value = data.execute("SELECT * FROM users WHERE ClassID = ?", 1)
