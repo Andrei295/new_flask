@@ -8,18 +8,11 @@ import hashlib
 data = SQL("sqlite:///C://Temp//userdata.db")
 
 
-
-def get_name():
-    user_1 = data.execute("SELECT Name FROM users WHERE Username = ?", "Andrei567")
-
-    return user_1
-
 def get_username():
     name = data.execute("SELECT Username FROM Users WHERE ID = ?", "3")
     return name
 
 def get_password():
-   
    return data.execute("SELECT Password FROM Users WHERE ID = ?", "3")
 
  
