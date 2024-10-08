@@ -9,7 +9,6 @@ data = SQL("sqlite:///C://Temp//userdata.db")
 
 
 
-
 def get_name():
     user_1 = data.execute("SELECT Name FROM users WHERE Username = ?", "Andrei567")
 
@@ -28,9 +27,6 @@ class Test_details(unittest.TestCase):
     def test_user(self):
         self.assertEqual(get_name(), [{'Name': 'Andrei'}])
 
-
-
-   
 
 
     def test_info(self):
