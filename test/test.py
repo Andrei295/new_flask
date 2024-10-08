@@ -18,7 +18,7 @@ def get_password():
  
 class Test_details(unittest.TestCase):
     def test_user(self):
-        self.assertEqual(get_name(), [{'Name': 'Andrei'}])
+        self.assertEqual(get_username(), [{'Name': 'Andrei'}])
 
 
 
