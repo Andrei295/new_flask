@@ -111,6 +111,12 @@ def confirm():
     return render_template("confirm.html")
 
 
+@app.route("/sign-in") #This is used to take the user to a page where they can sign in
+def sign_in():
+
+    return render_template("sign-in.html")
+
+
 @app.route("/register", methods=["POST"]) #This is used to register a new user
 def register():
 

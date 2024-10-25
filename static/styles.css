@@ -61,13 +61,22 @@ input {
     cursor: pointer;
 }
 
-.quote {
+.register {
     text-decoration: solid; 
-    color:lime; 
-    font-size: 50px;
+    font-size: 20px;
     position: absolute;
     top:0;
     right:0;
+}
+
+.register-button {
+    text-align: center;
+    padding: 10px 20px;
+    background: white;
+    color: black;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 20px;
 }
 
 .access button {
