@@ -26,13 +26,13 @@ input {
 }
 
 .card span {
-    font-size: 20px;
+    font-size: 30px;
     font-weight: bold;
 }
 
 .card {
     text-align: center;
-    width: 200px;
+    width: 300px;
     display: flex;
     flex-direction: column;
     gap: 15px;
@@ -49,6 +49,7 @@ input {
     color: #fff;
     border-radius: 10px;
     cursor: pointer;
+    font-size: 25px;
 }
 
 .homebutton:hover {
@@ -63,10 +64,10 @@ input {
 
 .register {
     text-decoration: solid; 
-    font-size: 20px;
-    position: absolute;
+    font-size: 30px;
+    position: fixed;
     top:0;
-    right:0;
+    right:200px;
 }
 
 .register-button {
@@ -76,7 +77,10 @@ input {
     color: black;
     border-radius: 10px;
     cursor: pointer;
-    font-size: 20px;
+    font-size: 30px;
+    top: 20px;
+    right: 30px;
+    position: absolute;
 }
 
 .access button {
