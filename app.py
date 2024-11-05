@@ -435,7 +435,7 @@ def deactivate_tutor():
 
     ID = request.form.get("ID")
 
-    data.execute("UPDATE users SET Status = 0 WHERE ID = ?", ID)
+    data.execute("UPDATE tutors SET Status = 0 WHERE ID = ?", ID)
 
     return redirect("/admin")
 
@@ -445,7 +445,7 @@ def deactivate_learner():
 
     ID = request.form.get("ID")
 
-    data.execute("UPDATE users SET Status = 0 WHERE ID = ?", ID)
+    data.execute("UPDATE learners SET Status = 0 WHERE ID = ?", ID)
 
     return redirect("/admin")
 
