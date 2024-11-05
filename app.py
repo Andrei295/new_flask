@@ -17,7 +17,7 @@ app.config["SESSION_TYPE"] = "filesystem"
 Session(app) 
 
 
-@app.route("/",) #Used as a default (login / register) page
+@app.route("/") #Used as a default (login / register) page
 def index():
         return render_template("index.html")
 
