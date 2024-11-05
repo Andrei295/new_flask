@@ -503,5 +503,5 @@ def classes():
 
 ### Username: Andrei567, Password: qwerty --> Learner
 
-### Username: Ben121, Pasword: jkl90 --> Tutor
+### Username: Ben812, Pasword: jkl90 --> Tutor
 
