@@ -208,7 +208,11 @@ def register():
 
     else:
 
-        if request.form.get("user_type") == {"tutor"}:
+        if not request.form.get("user_type"):
+            return redirect("/failure")
+
+
+        elif request.form.get("user_type") == "tutor":
 
             username = request.form.get("Username") #This is used to store the user's entered username
             phrase = request.form.get("Password") #This is used to store the user's entered password
@@ -222,7 +226,7 @@ def register():
             return redirect("/confirm")
         
 
-        elif request.form.get("user_type") == {"learner"}:
+        elif request.form.get("user_type") == "learner":
 
             username = request.form.get("Username") #This is used to store the user's entered username
             phrase = request.form.get("Password") #This is used to store the user's entered password
@@ -234,10 +238,6 @@ def register():
             data.execute("INSERT INTO learners (Username, Password, Email, Status, Name, Count) VALUES (?)", (username, phrase, mail, "1", name, "0")) #This will update the database with a new user
 
             return redirect("/confirm")
-        
-        else:
-
-            return redirect("/failure")
 
 
 
