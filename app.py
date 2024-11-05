@@ -175,9 +175,11 @@ def failure():
 
 @app.route("/admin") #This is used to manage all users in the database
 def admin():
-    users = data.execute("SELECT * FROM tutors AND learners") #This is used to store all database information in a variable, then sent to the admin page for management
+    learners = data.execute("SELECT * FROM learners") #This is used to store all learners in a variable, then sent to the admin page for management
 
-    return render_template("admin.html", users= users)
+    tutors = data.execute("SELECT * FROM tutors") #This is used to store all tutors in a variable, then sent to the admin page for management
+
+    return render_template("admin.html", learners= learners, tutors= tutors)
 
 
 @app.route("/confirm") #This is used to present the user with a confirmation messsage after successfully registering a new user

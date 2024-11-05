@@ -14,7 +14,7 @@
 
         <h3>Tutors</h3>
 
-        {% for user in users %} <!--A loop used to extract all values in a database-->
+        {% for user in tutors %} <!--A loop used to extract all values in a database-->
         <br>
         <p></p>
         <p></p>
@@ -26,7 +26,7 @@
                 <form action="/deregister-tutor" method="post"> <!--This form uses the hidden ID to deregister content in a database-->
                     <p></p>
 
-                    <input name="ID" type="hidden" value="{{ user.ID }}"> 
+                    <input name="ID" type="hidden" value="{{ user.ID }}"> <!--The ID will be used to affect the intended record in the database-->
                     <p></p>
 
                     <button style="font-size: 30px;" type="submit">Deregister</button> 
@@ -75,10 +75,11 @@
 
     {% endfor %}
 
+    <br>
 
         <h3>Learners</h3>
 
-        {% for user in users %} <!--A loop used to extract all values in a database-->
+        {% for user in learners %} <!--A loop used to extract all values in a database-->
         <br>
         <p></p>
         <p></p>
@@ -90,7 +91,7 @@
                 <form action="/deregister-learner" method="post"> <!--This form uses the hidden ID to deregister content in a database-->
                     <p></p>
 
-                    <input name="ID" type="hidden" value="{{ user.ID }}"> 
+                    <input name="ID" type="hidden" value="{{ user.ID }}"> <!--The ID will be used to affect the intended record in the database-->
                     <p></p>
 
                     <button style="font-size: 30px;" type="submit">Deregister</button> 
