@@ -208,11 +208,11 @@ def register():
 
     else:
 
-        if not request.form.get("user_type"):
+        if not request.form.get("user_type"): #This is used to get the type of user that is registering
             return redirect("/failure")
 
 
-        elif request.form.get("user_type") == "tutor":
+        elif request.form.get("user_type") == "tutor": #This is used to check the type of user
 
             username = request.form.get("Username") #This is used to store the user's entered username
             phrase = request.form.get("Password") #This is used to store the user's entered password
@@ -226,7 +226,7 @@ def register():
             return redirect("/confirm")
         
 
-        elif request.form.get("user_type") == "learner":
+        elif request.form.get("user_type") == "learner": #This is used to check the type of user
 
             username = request.form.get("Username") #This is used to store the user's entered username
             phrase = request.form.get("Password") #This is used to store the user's entered password
