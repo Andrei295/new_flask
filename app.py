@@ -478,10 +478,16 @@ def accessibility():
     return render_template("accessibility.html")
 
 
-@app.route("/back") #This is used to return the user back to the home page
+@app.route("/back-tutor") #This is used to return the user back to the home page
 def back():
 
-    return render_template("home.html")
+    return redirect("/home-tutor")
+
+
+@app.route("/back-learner") #This is used to return the user back to the home page
+def back():
+
+    return redirect("/home-learner")
 
 
 @app.route("/classes") #This is used to take the user to the classes/sechedule page
