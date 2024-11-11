@@ -162,3 +162,28 @@ input {
 .scheme:hover {
     cursor: pointer;
 }
+
+
+/*For the About Us Page*/
+
+.about_us {
+    padding: 20px;
+    border: 3px solid black;
+    border-radius: 10px;
+    font-size: 25px;
+}
+
+
+.about_us_btn {
+    color: black;
+    border-radius: 10px;
+    font-size: 30px;
+}
+
+
+.about_us_btn:hover {
+    color: black;
+    border-radius: 10px;
+    font-size: 30px;
+    cursor: pointer;
+}
