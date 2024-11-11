@@ -54,7 +54,7 @@ def home_tutor(): #This is used to validate the user's entries, and direct them 
 
                     users = data.execute("SELECT * FROM tutors WHERE Username = ? AND Password = ?", name, value) #This is used to ensure that only the ID of the correct user is being used instead of other users that may have the same username
 
-                    return render_template("home.html", users= users) #A new page is open for the user to update their account information
+                    return render_template("home_tutor.html", users= users) #A new page is open for the user to update their account information
                 
                 elif data.execute("SELECT Status FROM tutors WHERE Username = ? AND Status LIKE 2", name): #This will check if the account is locked
                     return redirect("/locked")
@@ -128,7 +128,7 @@ def home_learner(): #This is used to validate the user's entries, and direct the
 
                     users = data.execute("SELECT * FROM learners WHERE Username = ? AND Password = ?", name, value) #This is used to ensure that only the ID of the correct user is being used instead of other users that may have the same username
 
-                    return render_template("home.html", users= users) #A new page is open for the user to update their account information
+                    return render_template("home_learner.html", users= users) #A new page is open for the user to update their account information
                 
                 elif data.execute("SELECT Status FROM learners WHERE Username = ? AND Status LIKE 2", name): #This will check if the account is locked
                     return redirect("/locked")
