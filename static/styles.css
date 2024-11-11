@@ -16,7 +16,25 @@ body {
 }
 
 
+.heading {
+    font-weight: bold;
+    top:50px;
+    position: fixed;
+}
+
 /* For the index page */
+
+
+.nav {
+    text-decoration: solid;
+    color:white;
+    font-size: 100px;
+    background-color: grey;
+    border: 0px;
+    border-radius: 10px;
+    font-weight: bold;
+}
+
 
 input {
     padding: 9px;
@@ -186,4 +204,78 @@ input {
     border-radius: 10px;
     font-size: 30px;
     cursor: pointer;
+}
+
+
+
+/*This is for the Home/Main Page*/
+
+.main_btns {
+    border: 5px solid black;
+    border-radius: 15px;
+    padding-right: 150px;
+    padding-left: 150px;
+    padding-bottom: 100px;
+    padding-top: 100px;
+    font-size: 50px;
+}
+
+.main_btns:hover {
+    border: 5px solid black;
+    border-radius: 15px;
+    padding-right: 150px;
+    padding-left: 150px;
+    padding-bottom: 100px;
+    padding-top: 100px;
+    font-size: 50px;
+    cursor: pointer;
+}
+
+
+.update_btn {
+    top: 300px;
+    left: 350px;
+    position: fixed;
+}
+
+
+.class_btn {
+    top: 300px;
+    right: 350px;
+    position: fixed;
+}
+
+.reward_btn {
+    bottom: 300px;
+    left: 350px;
+    position: fixed;
+}
+
+
+.resources_btn {
+    bottom: 300px;
+    right: 350px;
+    position: fixed;
+}
+
+
+.logout {
+    color:red;
+    background:black;
+    border:0px;
+    border-radius:10px;
+    bottom:150px;
+    font-size:50px;
+    position:fixed;
+}
+
+.logout:hover {
+    color:red;
+    background:black;
+    border:0px;
+    border-radius:10px;
+    bottom:150px;
+    font-size:50px;
+    cursor:pointer;
+    position:fixed;
 }

@@ -479,13 +479,13 @@ def accessibility():
 
 
 @app.route("/back-tutor") #This is used to return the user back to the home page
-def back():
+def back_tutor():
 
     return redirect("/home-tutor")
 
 
 @app.route("/back-learner") #This is used to return the user back to the home page
-def back():
+def back_learner():
 
     return redirect("/home-learner")
 
