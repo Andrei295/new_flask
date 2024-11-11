@@ -140,7 +140,7 @@ def home_learner(): #This is used to validate the user's entries, and direct the
                     data.execute("UPDATE learners SET Count = 0 WHERE Username = ?", name) #This is used to prevent the admin from getting locked out
                     return redirect("/admin") #The admin will be sent to the admin page, where they can update the database
                 
-                elif data.execute("SELECT Status FROM learners WHERE Username = ? AND Status LIKE 0", name): #This wil check if the account is inactive
+                elif data.execute("SELECT Status FROM learners WHERE Username = ? AND Status LIKE 0", name): #This will check if the account is inactive
                     return redirect("/inactive")
 
             else:
