@@ -197,7 +197,7 @@ def sign_in():
 @app.route("/register", methods=["POST"]) #This is used to register a new user
 def register():
 
-    if not request.form.get("Username"): #This is used to check if the username field is empty
+    if not request.form.get("Username") or len(request.form.get("Username")) < 2: #This is used to check if the username field is empty #Also used to check the length of the username
         return redirect("/failure")
 
     elif not request.form.get("Password"): #This is to check if the password field is empty
