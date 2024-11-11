@@ -4,51 +4,23 @@
 
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <title>Home Page</title>
+        <title>Main Page</title>
 
         <link rel="stylesheet" href="/static/styles.css">
 
     </head>
 
     <body class="screen-center" style="background-color: rgb(187, 187, 187);">
-
-    <div style="display: flex;">
-        <form
-        action="/maincontent"> <!--This will take the user to the main content page-->
-        <button style="font-size: 60px;" type="submit">Main Content</button>
         
-        </form>
+        <h1>Main Page</h1>
+
+
         
-        </div>
+
+      
 
 
-        <h1 style="font-size: 40px;">Welcome To The Home Page!</h1>
-        <h2 style="font-size: 30px;">Here you are able to update your account information</h2>
-    
-        <form
-        style="text-align: center;"
-        action="/update"
-        method="post"
-        name="update">
-
-        {% for user in users %} <!--The loop is used to make sure that the value returned is not in a dictionary, but as a string-->
-
-            <input type="hidden" name="ID" value="{{ user.ID }}"> <!--This is used to send the user's ID to a route that will be used to update the correct user's account information-->
-
-        {% endfor %}
-
-        <input style="font-size: 35px;" type="text" name="Username" placeholder="New Username" autofocus autocomplete="off"> <!--Used to collect a username-->
-        <input style="font-size: 35px;" type="password" name="Password" placeholder="New Password" autofocus autocomplete="off"> <!--Used to collect a password-->
-        <input style="font-size: 35px;" type="email" name="Email" placeholder="New Email" autofocus autocomplete="off"> <!--Used to collect an email-->
-        <input style="font-size: 35px;" type="text" name="Name" placeholder="New Name" autofocus autocomplete="off"> <!--Used to collect a name-->
-
-        <p></p>
-        <p></p>
-
-        <button style="font-size: 30px; text-align: center;" type="submit">Update</button>
         
-        </form>
-
 
     </body>
 

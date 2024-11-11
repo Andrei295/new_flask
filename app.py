@@ -472,13 +472,6 @@ def contactus():
     return render_template("contactus.html")
 
 
-@app.route("/maincontent")
-def maincontent():
-
-    return render_template("maincontent.html")
-
-
-
 @app.route("/accessibility") #This is used to change the zoom or colour scheme of the web page
 def accessibility():
 
