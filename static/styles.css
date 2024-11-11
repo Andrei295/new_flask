@@ -17,6 +17,7 @@ body {
 
 
 .heading {
+    text-align: center;
     font-weight: bold;
     top:50px;
     position: fixed;
