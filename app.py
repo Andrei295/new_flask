@@ -498,7 +498,7 @@ def classes():
 
 ###List of names and passwords - so they are not forgotten
 
-### Username: admin, Password: zxcvb --> Learner and Tutor
+### Username: admin, Password: zxcvb --> Tutor
 
 ### Username: Andrei567, Password: qwerty --> Learner
 
