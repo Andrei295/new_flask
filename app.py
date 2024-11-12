@@ -352,7 +352,7 @@ def new_learner():
     return render_template("update_learner.html", ID= ID)
 
 
-def hash(phrase): #This is a funtion used to hash a new password
+def hash(phrase): #This is a function used to hash a new password
 
     object = hashlib.md5(phrase.encode())
     object = object.hexdigest()
