@@ -244,7 +244,7 @@ def register():
 @app.route("/deregister-tutor", methods=["POST"]) #Used to deregister people
 def deregister_tutor():
 
-    ID = request.form.get("ID") #This is use a unqiue ID to identify and delete a field from a table
+    ID = request.form.get("ID") #This uses a unqiue ID to identify and delete a field from a table
     if ID: 
 
         data.execute("DELETE FROM tutors WHERE ID = ?", ID) #This will delete any records that match a user's hidden ID
@@ -255,7 +255,7 @@ def deregister_tutor():
 @app.route("/deregister-learner", methods=["POST"]) #Used to deregister people
 def deregister_learner():
 
-    ID = request.form.get("ID") #This is use a unqiue ID to identify and delete a field from a table
+    ID = request.form.get("ID") #This uses a unqiue ID to identify and delete a field from a table
     if ID: 
 
         data.execute("DELETE FROM learners WHERE ID = ?", ID) #This will delete any records that match a user's hidden ID
