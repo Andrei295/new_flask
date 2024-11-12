@@ -15,15 +15,22 @@
 
         <h1>Admin</h1>
 
+
+        <form
+        action="/">
+    
+        <button class="goback_black" style="top: 50px; left: 50px; position: fixed" type="submit">Go Back</button>
+        
+        </form>
+
         <h3>Tutors</h3>
 
         {% for user in tutors %} <!--A loop used to extract all values in a database-->
-        <br>
         <p></p>
         <p></p>
 
         <tr> 
-            <td>{{ user.Name }}</td> 
+            <td class="names">{{ user.Name }}</td> 
             <td> 
 
                 <form action="/deregister-tutor" method="post"> <!--This form uses the hidden ID to deregister content in a database-->
@@ -32,7 +39,7 @@
                     <input name="ID" type="hidden" value="{{ user.ID }}"> <!--The ID will be used to affect the intended record in the database-->
                     <p></p>
 
-                    <button style="font-size: 30px;" type="submit">Deregister</button> 
+                    <button class="action_btn" type="submit">Deregister</button> 
                 </form> 
 
                 <form action="/unlock-tutor" method="post"> <!--This will send a user's hidden ID that will be used to unlock their account-->
@@ -41,7 +48,7 @@
                     <input name="ID" type="hidden" value="{{ user.ID }}">
                     <p></p>
 
-                    <button style="font-size: 30px" type="submit">Unlock</button>
+                    <button class="action_btn" type="submit">Unlock</button>
 
 
                 </form>
@@ -53,7 +60,7 @@
                 
                     <p></p>
 
-                    <button style="font-size: 30px;" type="submit">Update</button>
+                    <button class="action_btn" type="submit">Update</button>
                     
                 </form>
 
@@ -64,14 +71,11 @@
             
                 <p></p>
 
-                <button style="font-size: 30px;" type="submit">Deactivate</button>
+                <button class="action_btn" type="submit">Deactivate</button>
 
                 </form>
 
-                <p></p>
-                <p></p>
-                <p></p>
-                <p></p>
+                <br>
 
             </td> 
         </tr> 
@@ -83,12 +87,11 @@
         <h3>Learners</h3>
 
         {% for user in learners %} <!--A loop used to extract all values in a database-->
-        <br>
         <p></p>
         <p></p>
 
         <tr> 
-            <td>{{ user.Name }}</td> 
+            <td class="names">{{ user.Name }}</td> 
             <td> 
 
                 <form action="/deregister-learner" method="post"> <!--This form uses the hidden ID to deregister content in a database-->
@@ -97,7 +100,7 @@
                     <input name="ID" type="hidden" value="{{ user.ID }}"> <!--The ID will be used to affect the intended record in the database-->
                     <p></p>
 
-                    <button style="font-size: 30px;" type="submit">Deregister</button> 
+                    <button class="action_btn" type="submit">Deregister</button> 
                 </form> 
 
                 <form action="/unlock-learner" method="post"> <!--This will send a user's hidden ID that will be used to unlock their account-->
@@ -106,7 +109,7 @@
                     <input name="ID" type="hidden" value="{{ user.ID }}">
                     <p></p>
 
-                    <button style="font-size: 30px" type="submit">Unlock</button>
+                    <button class="action_btn" type="submit">Unlock</button>
 
 
                 </form>
@@ -118,7 +121,7 @@
                 
                     <p></p>
 
-                    <button style="font-size: 30px;" type="submit">Update</button>
+                    <button class="action_btn" type="submit">Update</button>
                     
                 </form>
 
@@ -129,14 +132,11 @@
             
                 <p></p>
 
-                <button style="font-size: 30px;" type="submit">Deactivate</button>
+                <button class="action_btn" type="submit">Deactivate</button>
 
                 </form>
 
-                <p></p>
-                <p></p>
-                <p></p>
-                <p></p>
+                <br>
 
             </td> 
         </tr> 
@@ -145,16 +145,13 @@
  
     </body>
 
-    <p></p>
-    <p></p>
-    <p></p>
+    <br>
 
     <form
-    action="/logout"
-    name="logout"> <!--This is a form that is used to log out a user, as well as clearing session variables-->
+    action="/admin">
 
 
-    <button style="font-size: 30px;" type="submit">Back To Log In Page</button>
+    <button class="goback_black" style="font-size: 30px;" type="submit">Back To Top Of Page</button>
 
     </form>
 

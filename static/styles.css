@@ -166,6 +166,7 @@ input {
     font-size: 30px;
     cursor: pointer;
     color: white;
+    padding: 15px;
 }
 
 .goback_white {
@@ -173,7 +174,8 @@ input {
     border-radius: 20px;
     font-size: 30px;
     cursor: pointer;
-    color: black
+    color: black;
+    padding: 15px;
 }
 
 /*For the Register Page*/
@@ -279,4 +281,33 @@ input {
     font-size:50px;
     cursor:pointer;
     position:fixed;
+}
+
+
+/*This is used for the Admin Page*/
+
+.names {
+    color:black;
+    font-weight: bold;
+}
+
+
+.action_btn {
+    color:black;
+    border: 2px solid black;
+    padding: 10px;
+    font-size: 30px;
+    background: none;
+    border-radius: 10px;
+}
+
+
+.action_btn:hover {
+    color:black;
+    border: 2px solid black;
+    padding: 10px;
+    font-size: 30px;
+    background: none;
+    border-radius: 10px;
+    cursor: pointer;
 }
