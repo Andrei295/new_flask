@@ -7,11 +7,10 @@
     <link rel="stylesheet" href="/static/styles.css">
 </head>
 
-<body class="screen-center" style="background-image: url(/static/background.jpg); background-repeat:no-repeat; background-size: contain; background-color: rgb(187, 187, 187); font-size: 50px;">
+<body class="screen-center" style="background-image: url(/static/background.jpg); background-repeat:no-repeat; background-size: cover; font-size: 50px;">
 
-    <h1 style="text-decoration: solid; color:white; font-size: 100px; background-color: black;">Home Page</h1>
+    <h1 class="nav">Navigation Menu</h1>
 
-    <div class="quote">TODAY'S ACTIONS ARE <br> TOMORROW'S RESULTS</div>
 
     <div style="display: flex;">
         <form 
@@ -23,13 +22,6 @@
         <form
         action="/contactus"> <!--This will take the user ot the Contact Us page-->
         <button class="homebutton" style="font-size: 30px;" type="submit">Contact Us</button>    
-    
-        </form>
-
-        
-        <form
-        action="/store"> <!--This will take the user to the Online Store -->
-        <button class="homebutton" style="font-size: 30px;" type="submit">Online Store</button>
     
         </form>
 
@@ -46,8 +38,8 @@
 
 
     <div style="display: flex; justify-content: center; align-items: center; gap: 20px;">
-        <form class="card" action="/home" method="post" name="login">
-            <span>Login</span>
+        <form class="card" action="/home-tutor" method="post" name="login">
+            <span >Login For Tutors</span>
         
             <input type="text" name="Username" placeholder="Username" autofocus autocomplete="off">
             <!--Used to collect a username-->
@@ -56,31 +48,38 @@
             <!--Used to collect a password-->
         
             <button class="homebutton" type="submit">Login</button>
+
         </form>
-    
 
 
-        <p style="font-size: 20px; background-color: white;">Don't have an account?  Register now! ➔</p>
+        <form class="card" action="/home-learner" method="post" name="login">
+            <span>Login For Learners</span>
+            <input type="text" name="Username" placeholder="Username" autofocus autocomplete="off">
+            <!--Used to collect a username-->
+        
+            <input type="password" name="Password" placeholder="Password" autofocus autocomplete="off">
+            <!--Used to collect a password-->
+        
+            <button class="homebutton" type="submit">Login</button>
+        </form>
 
-
-
-
-            <form class="card" action="/register" method="post" name="register">
-    
-                <span>Register</span>
-    
-                <input type="text" name="Name" placeholder="Name" autofocus autocomplete="off">
-                <input type="email" name="Email" placeholder="Email" autofocus autocomplete="off">
-    
-                <input type="text" name="Username" placeholder="Username" autofocus autocomplete="off">
-                <input type="password" name="Password" placeholder="Password" autofocus autocomplete="off">
-    
-                <button class="homebutton" type="submit">Register</button>
-            </form>
         </div>
 
 
+        <div>
+
+            <p class="register">Don't have an account?  Register now! ➔</p>
         
+            
+            <form action="/sign-in" name="register">
+    
+                <button class="register-button" type="submit">Register</button>
+
+            </form>
+
+        </div>
+
+
         <form
         class="access button"
         action="/accessibility"> <!--This is a form used to take the user to the accessibility page-->

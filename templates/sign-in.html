@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+    <head>
+
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <title>Register</title>
+
+        <link rel="stylesheet" href="/static/styles.css">
+
+    </head>
+
+
+<body style= "background-color: rgb(187, 187, 187);">
+
+
+<div class="screen-center">
+
+    <div class="heading">
+        <h1>Register</h1>
+    </div>
+
+    <form class="card" action="/register" method="post" name="register">
+
+
+        <input type="text" name="Name" placeholder="Name" autofocus autocomplete="off">
+        <input type="email" name="Email" placeholder="Email" autofocus autocomplete="off">
+
+        <input type="text" name="Username" placeholder="Username" autofocus autocomplete="off">
+        <input type="password" name="Password" placeholder="Password" autofocus autocomplete="off">
+
+        <input type="password" name="Re-enter_Password" placeholder="Re-enter Password" autofocus autocomplete="off">
+
+
+        <p><input type="radio" value="tutor" name="user_type" class="scheme">Tutor <input type="radio" value="learner" name="user_type" class="scheme">Learner</p>
+
+        <button class="goback_white" type="submit">Register</button>
+
+    </form>
+
+    <br>
+
+    <form
+action="/logout"
+name="logout"> <!--This is a form that is used to log out a user, as well as clearing session variables-->
+
+
+<button class="goback_black" type="submit">Go Back</button>
+
+</form>
+
+</div>
+
+</body>
+
+    </html>

@@ -1,7 +1,7 @@
 /* For general use */
 
 body {
-    font-family: Arial, sans-serif;
+    font-family: Arial;
     margin: 0px;
     padding: 0px;
     font-size: 30px;
@@ -16,7 +16,26 @@ body {
 }
 
 
+.heading {
+    text-align: center;
+    font-weight: bold;
+    top:50px;
+    position: fixed;
+}
+
 /* For the index page */
+
+
+.nav {
+    text-decoration: solid;
+    color:white;
+    font-size: 100px;
+    background-color: grey;
+    border: 0px;
+    border-radius: 10px;
+    font-weight: bold;
+}
+
 
 input {
     padding: 9px;
@@ -26,13 +45,13 @@ input {
 }
 
 .card span {
-    font-size: 20px;
+    font-size: 30px;
     font-weight: bold;
 }
 
 .card {
     text-align: center;
-    width: 200px;
+    width: 300px;
     display: flex;
     flex-direction: column;
     gap: 15px;
@@ -49,6 +68,7 @@ input {
     color: #fff;
     border-radius: 10px;
     cursor: pointer;
+    font-size: 25px;
 }
 
 .homebutton:hover {
@@ -61,13 +81,25 @@ input {
     cursor: pointer;
 }
 
-.quote {
+.register {
     text-decoration: solid; 
-    color:lime; 
-    font-size: 50px;
-    position: absolute;
+    font-size: 30px;
+    position: fixed;
     top:0;
-    right:0;
+    right:200px;
+}
+
+.register-button {
+    text-align: center;
+    padding: 10px 20px;
+    background: white;
+    color: black;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 30px;
+    top: 20px;
+    right: 30px;
+    position: absolute;
 }
 
 .access button {
@@ -109,22 +141,6 @@ input {
     text-align: center;
 }
 
-.scheme {
-    height: 20px;
-    width: 20px;
-}
-
-.scheme-button {
-    border: 0;
-    border-radius: 10px;
-    padding: 10px 20px;;
-    color: black;
-    border-radius: 10px;
-    cursor: pointer;
-    font-size: 35px;
-    position:relative;
-}
-
 
 /* For classes/schedule */
 
@@ -137,4 +153,130 @@ input {
     left: 20px;
     font-size: 45px;
     position: absolute;
+    background-color: rgb(187, 187, 187);
+}
+
+
+/* For 'Go Back' buttons */
+
+.goback_black {
+    background-color:black; 
+    border: 0;
+    border-radius: 10px;
+    font-size: 30px;
+    cursor: pointer;
+    color: white;
+}
+
+.goback_white {
+    background-color:white; 
+    border-radius: 20px;
+    font-size: 30px;
+    cursor: pointer;
+    color: black
+}
+
+/*For the Register Page*/
+
+.scheme:hover {
+    cursor: pointer;
+}
+
+
+/*For the About Us Page*/
+
+.about_us {
+    padding: 20px;
+    border: 3px solid black;
+    border-radius: 10px;
+    font-size: 25px;
+}
+
+
+.about_us_btn {
+    color: black;
+    border-radius: 10px;
+    font-size: 30px;
+}
+
+
+.about_us_btn:hover {
+    color: black;
+    border-radius: 10px;
+    font-size: 30px;
+    cursor: pointer;
+}
+
+
+
+/*This is for the Home/Main Page*/
+
+.main_btns {
+    border: 5px solid black;
+    border-radius: 15px;
+    padding-right: 150px;
+    padding-left: 150px;
+    padding-bottom: 100px;
+    padding-top: 100px;
+    font-size: 50px;
+}
+
+.main_btns:hover {
+    border: 5px solid black;
+    border-radius: 15px;
+    padding-right: 150px;
+    padding-left: 150px;
+    padding-bottom: 100px;
+    padding-top: 100px;
+    font-size: 50px;
+    cursor: pointer;
+}
+
+
+.update_btn {
+    top: 300px;
+    left: 350px;
+    position: fixed;
+}
+
+
+.class_btn {
+    top: 300px;
+    right: 350px;
+    position: fixed;
+}
+
+.reward_btn {
+    bottom: 300px;
+    left: 350px;
+    position: fixed;
+}
+
+
+.resources_btn {
+    bottom: 300px;
+    right: 350px;
+    position: fixed;
+}
+
+
+.logout {
+    color:red;
+    background:black;
+    border:0px;
+    border-radius:10px;
+    bottom:120px;
+    font-size:50px;
+    position:fixed;
+}
+
+.logout:hover {
+    color:red;
+    background:black;
+    border:0px;
+    border-radius:10px;
+    bottom:120px;
+    font-size:50px;
+    cursor:pointer;
+    position:fixed;
 }

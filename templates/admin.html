@@ -12,7 +12,12 @@
 
     <body style="text-align: center; background-color: rgb(187, 187, 187);">
 
-        {% for user in users %} <!--A loop used to extract all values in a database-->
+
+        <h1>Admin</h1>
+
+        <h3>Tutors</h3>
+
+        {% for user in tutors %} <!--A loop used to extract all values in a database-->
         <br>
         <p></p>
         <p></p>
@@ -21,16 +26,16 @@
             <td>{{ user.Name }}</td> 
             <td> 
 
-                <form action="/deregister" method="post"> <!--This form uses the hidden ID to deregister content in a database-->
+                <form action="/deregister-tutor" method="post"> <!--This form uses the hidden ID to deregister content in a database-->
                     <p></p>
 
-                    <input name="ID" type="hidden" value="{{ user.ID }}"> 
+                    <input name="ID" type="hidden" value="{{ user.ID }}"> <!--The ID will be used to affect the intended record in the database-->
                     <p></p>
 
                     <button style="font-size: 30px;" type="submit">Deregister</button> 
                 </form> 
 
-                <form action="/unlock" method="post"> <!--This will send a user's hidden ID that will be used to unlock their account-->
+                <form action="/unlock-tutor" method="post"> <!--This will send a user's hidden ID that will be used to unlock their account-->
                     <p></p>
 
                     <input name="ID" type="hidden" value="{{ user.ID }}">
@@ -41,7 +46,7 @@
 
                 </form>
 
-                <form action="/new" method="post"> <!--This will send the admin to a page to update a user's account information-->
+                <form action="/new-tutor" method="post"> <!--This will send the admin to a page to update a user's account information-->
                     <p></p>
 
                     <input name="ID" type="hidden" value="{{ user.ID }}">
@@ -52,7 +57,72 @@
                     
                 </form>
 
-                <form action="/deactivate" method="post"> <!--This will send the admin to a page to update a user's account information-->
+                <form action="/deactivate-tutor" method="post"> <!--This will send the admin to a page to update a user's account information-->
+                <p></p>
+
+                <input name="ID" type="hidden" value="{{ user.ID }}">
+            
+                <p></p>
+
+                <button style="font-size: 30px;" type="submit">Deactivate</button>
+
+                </form>
+
+                <p></p>
+                <p></p>
+                <p></p>
+                <p></p>
+
+            </td> 
+        </tr> 
+
+    {% endfor %}
+
+    <br>
+
+        <h3>Learners</h3>
+
+        {% for user in learners %} <!--A loop used to extract all values in a database-->
+        <br>
+        <p></p>
+        <p></p>
+
+        <tr> 
+            <td>{{ user.Name }}</td> 
+            <td> 
+
+                <form action="/deregister-learner" method="post"> <!--This form uses the hidden ID to deregister content in a database-->
+                    <p></p>
+
+                    <input name="ID" type="hidden" value="{{ user.ID }}"> <!--The ID will be used to affect the intended record in the database-->
+                    <p></p>
+
+                    <button style="font-size: 30px;" type="submit">Deregister</button> 
+                </form> 
+
+                <form action="/unlock-learner" method="post"> <!--This will send a user's hidden ID that will be used to unlock their account-->
+                    <p></p>
+
+                    <input name="ID" type="hidden" value="{{ user.ID }}">
+                    <p></p>
+
+                    <button style="font-size: 30px" type="submit">Unlock</button>
+
+
+                </form>
+
+                <form action="/new-learner" method="post"> <!--This will send the admin to a page to update a user's account information-->
+                    <p></p>
+
+                    <input name="ID" type="hidden" value="{{ user.ID }}">
+                
+                    <p></p>
+
+                    <button style="font-size: 30px;" type="submit">Update</button>
+                    
+                </form>
+
+                <form action="/deactivate-learner" method="post"> <!--This will send the admin to a page to update a user's account information-->
                 <p></p>
 
                 <input name="ID" type="hidden" value="{{ user.ID }}">

@@ -8,7 +8,7 @@ if defined _OLD_CODEPAGE (
     "%SystemRoot%\System32\chcp.com" 65001 > nul
 )
 
-set VIRTUAL_ENV=c:\Users\335165\OneDrive - Milton Keynes College O365\flask\.venv
+set VIRTUAL_ENV=c:\Users\335165\OneDrive - Milton Keynes College O365\new_flask\.venv
 
 if not defined PROMPT set PROMPT=$P$G
 

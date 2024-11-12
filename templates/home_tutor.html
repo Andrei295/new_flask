@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+    <head>
+
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <title>Home Page</title>
+
+        <link rel="stylesheet" href="/static/styles.css">
+
+    </head>
+
+    <body class="screen-center" style="background-color: rgb(187, 187, 187);">
+
+        <h1 class="heading">Home Page</h1>
+
+    {% for user in users %} <!--This is simply used to extract a user's ID-->
+
+        <form
+        action="/new-tutor"
+        method="post"
+        class="update_btn">
+        
+        <input name="ID" type="hidden" value="{{ user.ID }}"> <!--The ID will be used to affect the intended record in the database-->
+    
+        <button class="main_btns" type="submit">Update Account</button>
+    
+        </form>
+
+
+
+
+        <form
+        action="/classes"
+        class="class_btn">
+    
+        <button class="main_btns" type="submit">View Classes/Schedule</button>
+    
+        </form>
+        
+
+
+
+
+        <form
+        action=""
+        class="reward_btn"> <!--Needs a route to go to-->
+    
+        <button class="main_btns" type="submit">View/Claim Rewards</button>
+    
+        </form>
+
+
+
+
+
+        <form
+        action=""
+        class="resources_btn"> <!--Needs a route to go to-->
+    
+        <button class="main_btns" type="submit">View Resources</button>
+    
+        </form>
+      
+    
+    {% endfor %}
+
+        
+
+    </body>
+
+
+    <p></p>
+    <p></p>
+    <p></p>
+
+    <form
+    action="/logout"
+    name="logout"> <!--This is a form that is used to log out a user, as well as clearing session variables-->
+
+
+    <button class="logout" type="submit">Log Out</button>
+
+    </form>
+
+    </html>
