@@ -14,11 +14,14 @@
 
         <h1 class="heading">Home Page</h1>
 
+    {% for user in users %} <!--This is simply used to extract a user's ID-->
 
         <form
-        action="/update-tutor"
+        action="/new-tutor"
+        method="post"
         class="update_btn">
         
+        <input name="ID" type="hidden" value="{{ user.ID }}"> <!--The ID will be used to affect the intended record in the database-->
     
         <button class="main_btns" type="submit">Update Account</button>
     
@@ -59,7 +62,8 @@
     
         </form>
       
-
+    
+    {% endfor %}
 
         
 
