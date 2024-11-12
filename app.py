@@ -203,7 +203,7 @@ def register():
     elif not request.form.get("Password"): #This is to check if the password field is empty
         return redirect("/failure")
     
-    elif request.form.get("Password") != request.form.get("Re-enter_Password"): #This is used to chekc if the original password matches the re-entered one for verification
+    elif request.form.get("Password") != request.form.get("Re-enter_Password"): #This is used to check if the original password matches the re-entered one for verification
         return redirect("/failure")
 
     else:
