@@ -496,6 +496,20 @@ def classes():
     return render_template("classes.html")
 
 
+@app.route("/resources") #This is used to take the user to the resources page
+def resources():
+
+    return render_template("resources.html")
+
+
+@app.route("/results", methods=["POST"]) #This is used to present to the user their search results from the resources page
+def results():
+
+    search = request.form.get("search")
+
+    return render_template("results.html", search= search)
+
+
 ###List of names and passwords - so they are not forgotten
 
 ### Username: admin, Password: zxcvb --> Tutor

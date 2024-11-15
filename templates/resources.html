@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+    <head>
+
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <title>Resources</title>
+
+        <link rel="stylesheet" href="/static/styles.css">
+
+    </head>
+
+
+<body style= "background-color: rgb(187, 187, 187);">
+
+
+<div class="screen-center">
+
+        <h1 class="heading">Resources</h1>
+
+        <h2>Enter a Subject or Key Words/Phrases to Search:</h2>
+
+    <form class="card" action="/search" method="post" name="reasources">
+
+        <input type="text" name="search" style="font-style: italic; font-size: 35px;" placeholder="Search Here" autofocus autocomplete="off"> <!--This is the search input-->
+
+        <button class="goback_white" type="submit">Search</button>
+
+    </form>
+
+    <br>
+
+    <form
+action="/logout"
+name="logout"> <!--This is a form that is used to log out a user, as well as clearing session variables-->
+
+
+<button class="goback_black" type="submit">Go Back</button>
+
+</form>
+
+</div>
+
+</body>
+
+    </html>
