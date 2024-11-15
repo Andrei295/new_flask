@@ -22,6 +22,11 @@
         class="update_btn">
         
         <input name="ID" type="hidden" value="{{ user.ID }}"> <!--The ID will be used to affect the intended record in the database-->
+
+        <!--This is used for if the user decides to press the 'Go Back' button on the home page-->
+        
+        <input name="Username" type="hidden" value="{{ user.Username }}">
+        <input name="Password" type="hidden" value="{{ user.Password }}">
     
         <button class="main_btns" type="submit">Update Account</button>
     
