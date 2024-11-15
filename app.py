@@ -294,6 +294,9 @@ def locked():
 @app.route("/update-tutor", methods=["POST"]) #This will be used to update a user's account information
 def update_tutor(): #This route will obtain a user's id, then update their information changed by the admin
 
+    if request.form.get("Password") != request.form.get("Re-enter_Password"): #This is used to check if the original password matches the re-entered one for verification
+        return redirect("/failure")
+
     ID = request.form.get("ID") #This is used to store the user's hidden ID
 
     username = request.form.get("Username") #This is used to store the user's entered username
@@ -316,6 +319,9 @@ def update_tutor(): #This route will obtain a user's id, then update their infor
 
 @app.route("/update-learner", methods=["POST"]) #This will be used to update a user's account information
 def update_learner(): #This route will obtain a user's id, then update their information changed by the admin
+
+    if request.form.get("Password") != request.form.get("Re-enter_Password"): #This is used to check if the original password matches the re-entered one for verification
+        return redirect("/failure")
 
     ID = request.form.get("ID") #This is used to store the user's hidden ID
 
