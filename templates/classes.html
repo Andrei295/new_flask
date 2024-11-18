@@ -11,21 +11,28 @@
     </head>
 
     <body class="screen-center" style="background-color: rgb(187, 187, 187);">
+
+        <form
+        action="/">
+    
+        <button class="update" style="top: 50px; left: 50px; position: fixed" type="submit">Go Back</button>
+        
+        </form>
     
         <h1 class="heading">Classes/Schedule</h1>
 
         <!--This is a tables used for the classes as a timetable-->
 
-        <table class="classes_table">
+        <table>
             <tr>
-                <th>English</th>
-                <th>Maths</th>
-                <th>Physics</th>
-                <th>Chemistry</th>
-                <th>Biology</th>
+                <th style="background-color: blue;">English</th>
+                <th style="background-color: black;">Maths</th>
+                <th style="background-color: blue;">Physics</th>
+                <th style="background-color: black;">Chemistry</th>
+                <th style="background-color: blue;">Biology</th>
             </tr>
 
-            <tr>
+            <tr style="background-color: blue;">
                 <td>Lesson 1</td>
                 <td>Lesson 1</td>
                 <td>Lesson 1</td>
@@ -33,7 +40,7 @@
                 <td>Lesson 1</td>
             </tr>
 
-            <tr>
+            <tr style="background-color: black;">
                 <td>Lesson 2</td>
                 <td>Lesson 2</td>
                 <td>Lesson 2</td>
@@ -41,7 +48,7 @@
                 <td>Lesson 2</td>
             </tr>
 
-            <tr>
+            <tr style="background-color: blue;">
                 <td>Lesson 3</td>
                 <td>Lesson 3</td>
                 <td>Lesson 3</td>
@@ -49,7 +56,7 @@
                 <td>Lesson 3</td>
             </tr>
 
-            <tr>
+            <tr style="background-color: black;">
                 <td>Lesson 4</td>
                 <td>Lesson 4</td>
                 <td>Lesson 4</td>
@@ -57,7 +64,7 @@
                 <td>Lesson 4</td>
             </tr>
 
-            <tr>
+            <tr style="background-color: blue;">
                 <td>Lesson 5</td>
                 <td>Lesson 5</td>
                 <td>Lesson 5</td>
@@ -76,11 +83,9 @@
     <p></p>
 
     <form
-    action="/logout"
-    name="logout"> <!--This is a form that is used to log out a user, as well as clearing session variables-->
+    action="/classes">
 
-
-    <button type="submit">Go Back</button>
+    <button class="goback_white" style="font-size: 30px;" type="submit">Back To Top Of Page</button>
 
     </form>
 

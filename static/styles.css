@@ -157,10 +157,13 @@ input {
 }
 
 
-.classes_table {
+th, td, table {
     padding: 35px;
-    border-spacing: 35px;
+    border-spacing: 15px;
     border: 3px solid black;
+    color:white;
+    top: 10%;
+    position: relative;
 }
 
 
