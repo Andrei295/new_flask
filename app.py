@@ -342,7 +342,7 @@ def update_learner(): #This route will obtain a user's id, then update their inf
     return redirect("/confirm")
 
 
-@app.route("/new-tutor", methods=["POST"]) #This wil collect the user ID, and send it off to the update page, where it will be used to update the correct user
+@app.route("/new-tutor", methods=["POST"]) #This will collect the user ID, and send it off to the update page, where it will be used to update the correct user
 def new_tutor():
 
     ID = request.form.get("ID")
@@ -350,7 +350,7 @@ def new_tutor():
     return render_template("update_tutor.html", ID= ID)
 
 
-@app.route("/new-learner", methods=["POST"]) #This wil collect the user ID, and send it off to the update page, wheere it will be used to update the correct user
+@app.route("/new-learner", methods=["POST"]) #This will collect the user ID, and send it off to the update page, wheere it will be used to update the correct user
 def new_learner():
 
     ID = request.form.get("ID")
