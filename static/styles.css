@@ -114,26 +114,6 @@ input {
     position: absolute;
 }
 
-
-/* For main content page */
-
-.main-content {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-}
-
-.main-content h2 {
-    color:magenta
-}
-
-.main-content h3 {
-    color:aqua
-}
-
-
 /* For accessibility page */
 
 .accessibility {
