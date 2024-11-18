@@ -41,17 +41,7 @@
 
     <form
     action="/home-learner"
-    name="back"
-    method="post"> <!--This is used to take the user back to the home page-->
-    
-    <!--This is used to pass the user's information to the home page, so that they are re-logged in-->
-
-    {% for user in users %}
-
-    <input name="Username" type="hidden" value="{{ user.Username }}">
-    <input name="Password" type="hidden" value="{{ user.Password }}">
-
-    {% endfor %}
+    name="back"> <!--This is used to take the user back to the home page-->
 
     <button class="goback_black" style="bottom: 20%; position: fixed;" type="submit">Go Back</button>
     

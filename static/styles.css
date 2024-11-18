@@ -268,6 +268,7 @@ input {
     border:0px;
     border-radius:10px;
     bottom:120px;
+    left:45%;
     font-size:50px;
     position:fixed;
 }
@@ -279,6 +280,7 @@ input {
     border-radius:10px;
     bottom:120px;
     font-size:50px;
+    left:45%;
     cursor:pointer;
     position:fixed;
 }

@@ -347,12 +347,7 @@ def new_tutor():
 
     ID = request.form.get("ID")
 
-    Username = request.form.get("Username")
-    Password = request.form.get("Password")
-
-    users = data.execute("SELECT * FROM tutors WHERE Username = ? AND Password = ?", Username, Password)
-
-    return render_template("update_tutor.html", ID= ID, users= users)
+    return render_template("update_tutor.html", ID= ID)
 
 
 @app.route("/new-learner", methods=["POST"]) #This wil collect the user ID, and send it off to the update page, whewre it will be used to update the correct user
@@ -360,12 +355,7 @@ def new_learner():
 
     ID = request.form.get("ID")
 
-    Username = request.form.get("Username")
-    Password = request.form.get("Password")
-
-    users = data.execute("SELECT * FROM learners WHERE Username = ? AND Password = ?", Username, Password)
-
-    return render_template("update_learner.html", ID= ID, users= users)
+    return render_template("update_learner.html", ID= ID)
 
 
 def hash(phrase): #This is a function used to hash a new password
