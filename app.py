@@ -350,7 +350,7 @@ def new_tutor():
     return render_template("update_tutor.html", ID= ID)
 
 
-@app.route("/new-learner", methods=["POST"]) #This will collect the user ID, and send it off to the update page, wheere it will be used to update the correct user
+@app.route("/new-learner", methods=["POST"]) #This will collect the user ID, and send it off to the update page, where it will be used to update the correct user
 def new_learner():
 
     ID = request.form.get("ID")
@@ -496,7 +496,7 @@ def back_learner():
     return redirect("/home-learner")
 
 
-@app.route("/classes") #This is used to take the user to the classes/sechedule page
+@app.route("/classes") #This is used to take the user to the classes/schedule page
 def classes():
 
     return render_template("classes.html")
