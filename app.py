@@ -522,6 +522,12 @@ def results():
     return render_template("results.html", search= search)
 
 
+@app.route("/rewards") #This is used to take a learner to the rewards page
+def rewards():
+
+    return render_template("rewards.html")
+
+
 ###List of names and passwords - so they are not forgotten
 
 ### Username: admin, Password: zxcvb --> Tutor
