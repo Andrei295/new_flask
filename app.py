@@ -347,7 +347,10 @@ def new_tutor():
 
     ID = request.form.get("ID")
 
-    return render_template("update_tutor.html", ID= ID)
+    Name = data.execute("SELECT Name FROM tutors WHERE ID = ?", ID) #This is used to retrieve a user's name from the database
+    Name = Name[0]["Name"] #This is used to exctract the name from a dictionary
+
+    return render_template("update_tutor.html", ID= ID, name= Name)
 
 
 @app.route("/new-learner", methods=["POST"]) #This will collect the user ID, and send it off to the update page, where it will be used to update the correct user
@@ -355,7 +358,10 @@ def new_learner():
 
     ID = request.form.get("ID")
 
-    return render_template("update_learner.html", ID= ID)
+    Name = data.execute("SELECT Name FROM learners WHERE ID = ?", ID) #This is used to retrieve a user's name from the database
+    Name = Name[0]["Name"] #This is used to exctract the name from a dictionary
+
+    return render_template("update_learner.html", ID= ID, name= Name)
 
 
 def hash(phrase): #This is a function used to hash a new password
