@@ -321,3 +321,14 @@ th, td, table {
     background: 0;
     cursor: pointer;
 }
+
+.badges_btn {
+    border: 3px solid black;
+    padding: 70px; font-size: 30px;
+}
+
+.badges_btn:hover {
+    border: 3px solid black;
+    padding: 70px; font-size: 30px;
+    cursor: pointer;
+}
