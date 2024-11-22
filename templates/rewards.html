@@ -4,7 +4,7 @@
 
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <title>Your Account</title>
+        <title>Rewards Page</title>
 
         <link rel="stylesheet" href="/static/styles.css">
 
@@ -12,7 +12,28 @@
 
     <body class="screen-center" style="background-color: rgb(187, 187, 187);">
 
-    <i>You Do Not Own Any Badges Yet :/</i>
+    <h1 class="heading">Rewards Page</h1>
+
+    <!--Below are the subheadings for the amout of points a learner has, claimed and unclaimed badges-->
+
+    <div style="border: 3px solid black;top:15%; position:fixed; padding: 15px; background-color: white;">
+        <p>Your Availiable Points: 27</p>
+    </div>
+
+    <div style="border: 3px solid black;top:30%; left:15%; position:fixed; padding: 15px; background-color: white;">
+        <p>Your Unclaimed Badges:</p>
+    </div>
+
+    <div style="border: 3px solid black;top:30%; right:15%; position:fixed; padding: 15px; background-color: white;">
+        <p>Your Claimed Badges:</p>
+    </div>
+
+
+    <!--Below are shown claimed and unclaimed badges-->
+
+    <i class="error_msg" style="left: 7%;">There seems to be an issue <br>  with the unclaimed badges, sorry. :/</i>
+
+    <i class="error_msg" style="right: 7%;">There seems to be an issue <br> with the claimed badges, sorry. :/</i>
 
 
     <form

@@ -332,3 +332,16 @@ th, td, table {
     padding: 70px; font-size: 30px;
     cursor: pointer;
 }
+
+/*For the rewards Page*/
+
+.error_msg {
+    border: 3px solid black;
+    border-radius: 15px;
+    top:40%;
+    position: fixed;
+    padding:100px;
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+}
