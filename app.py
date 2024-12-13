@@ -517,7 +517,7 @@ def resources():
 @app.route("/results", methods=["POST"]) #This is used to present to the user their search results from the resources page
 def results():
 
-    search = request.form.get("search")
+    search = request.form.get("class_type")
 
     return render_template("results.html", search= search)
 
